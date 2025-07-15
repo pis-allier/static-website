@@ -3,13 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Static Website</title>
+  <title>My Cool Static Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <button onclick="showMessage()">Click Me</button>
-  <p id="message"></p>
+  <header>
+    <h1>Welcome to My Cool Website</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About This Site</h2>
+      <p>This is a sample static website built with HTML, CSS, and JavaScript. You can host it for free on GitHub Pages!</p>
+      <button onclick="toggleMore()">Show more</button>
+      <p id="moreText" style="display:none;">
+        Here’s some more hidden text that appears when you click the button.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form onsubmit="return sendMessage()">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Cool Website</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
